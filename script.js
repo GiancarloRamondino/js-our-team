@@ -40,24 +40,27 @@ const teamMembers = [
 //creare una  card per ogni membro del team
 const teamContainer = document.querySelector(".team-container");
 
-teamMembers.forEach(member => {
-  const card = document.createElement("div");
-  card.classList.add("team-card");
+if (teamContainer) {
+  teamMembers.forEach(member => {
+    const card = document.createElement("div");
+    card.classList.add("team-card");
 
-  card.innerHTML = `
-    <div class="card-image">
-      <img src="${member.img}" alt="${member.name}">
-    </div>
-    <div class="card-text">
-      <h3>${member.name}</h3>
-      <p>${member.role}</p>
-      <p>${member.email}</p>
-    </div>
-  `;
+    card.innerHTML = `
+      <div class="card-image">
+        <img src="${member.img}" alt="${member.name}">
+      </div>
+      <div class="card-text">
+        <h3>${member.name}</h3>
+        <p>${member.role}</p>
+        <p>${member.email}</p>
+      </div>
+    `;
 
-  teamContainer.appendChild(card);
+    teamContainer.appendChild(card);
+  });
+} else {
+  console.error("Element with class 'team-container' not found in the DOM.");
 }
-);
 console.log(teamMembers);
 
 // Funzione per aggiungere un nuovo membro del team
@@ -93,10 +96,9 @@ function addTeamMember() {
         <p>${newMember.email}</p>
       </div>
     `;
-
     teamContainer.appendChild(card);
   } else {
-    alert("Perfavore  rieempi oogni campo del modulo!");
+    alert("Per favore riempi ogni campo del modulo!");
   }
 
   // Reset dei campi del modulo
@@ -106,13 +108,10 @@ function addTeamMember() {
   document.getElementById("img").value = "";
   // Chiudi il modulo
   const modal = document.getElementById("modal");
-  modal.style.display = "none";
   const overlay = document.getElementById("overlay");
+  modal.style.display = "none";
   overlay.style.display = "none";
   // Reset del modulo
   const form = document.getElementById("team-form");
   form.reset();
-  // Chiudi il modulo
-  modal.style.display = "none";
-  overlay.style.display = "none"; 
 }
