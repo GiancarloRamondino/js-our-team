@@ -44,15 +44,20 @@ if (teamContainer) {
   teamMembers.forEach(member => {
     const card = document.createElement("div");
     card.classList.add("team-card");
-
+    card.classList.add("d-flex");
+    card.classList.add("bg-dark");
+    card.classList.add("col-4");
+    card.classList.add("text-start");
+    card.classList.add("m-1");
+    
     card.innerHTML = `
-      <div class="card-image">
+      <div class="card-image float-start ">
         <img src="${member.img}" alt="${member.name}">
       </div>
       <div class="card-text">
-        <h3>${member.name}</h3>
-        <p>${member.role}</p>
-        <p>${member.email}</p>
+        <h4>${member.name}</h4>
+        <p class=".fs-6 text">${member.role}</p>
+        <p class=".fs-6 text">${member.email}</p>
       </div>
     `;
 
@@ -85,6 +90,11 @@ function addTeamMember() {
     // Aggiungi il nuovo membro alla visualizzazione
     const card = document.createElement("div");
     card.classList.add("team-card");
+    card.classList.add("d-flex");
+    card.classList.add("bg-dark");
+    card.classList.add("col-4");
+    card.classList.add("text-start");
+    card.classList.add("m-2");
 
     card.innerHTML = `
       <div class="card-image">
