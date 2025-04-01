@@ -51,10 +51,10 @@ if (teamContainer) {
     card.classList.add("m-1");
     
     card.innerHTML = `
-      <div class="card-image float-start ">
-        <img src="${member.img}" alt="${member.name}">
+      <div class="card-image">
+        <img src="${member.img}" class="img-fluid" alt="${member.name}">
       </div>
-      <div class="card-text">
+      <div class="card-text ">
         <h4>${member.name}</h4>
         <p class=".fs-6 text">${member.role}</p>
         <p class=".fs-6 text">${member.email}</p>
@@ -98,7 +98,7 @@ function addTeamMember() {
 
     card.innerHTML = `
       <div class="card-image">
-        <img src="${newMember.img}" alt="${newMember.name}">
+        <img src="${newMember.img}" class="img-fluid" alt="${newMember.name}">
       </div>
       <div class="card-text">
         <h3>${newMember.name}</h3>
@@ -125,3 +125,4 @@ function addTeamMember() {
   const form = document.getElementById("team-form");
   form.reset();
 }
+
