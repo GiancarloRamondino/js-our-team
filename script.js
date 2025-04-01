@@ -53,9 +53,9 @@ if (teamContainer) {
     
     card.innerHTML = `
       <div class="card-image object-fit-contain">
-        <img src="${member.img}" style="width: 125px; height: 125px;" alt="${member.name}">
+        <img src="${member.img}" class="card-image1" alt="${member.name}">
       </div>
-      <div class="card-text bg-dark" style="width: 100%;">
+      <div class="card-text bg-dark">
         <h4>${member.name}</h4>
         <p class="fs-6 text">${member.role}</p>
         <p class="fs-6 text text-decoration-underline">${member.email}</p>
@@ -98,9 +98,9 @@ function addTeamMember() {
 
     card.innerHTML = `
       <div class="card-image object-fit-contain">
-        <img src="${newMember.img}" style="width: 125px; height: 125px;" alt="${newMember.name}">
+        <img src="${newMember.img}" class="card-image1" alt="${newMember.name}">
       </div>
-      <div class="card-text bg-dark" style="width: 100%;">
+      <div class="card-text bg-dark">
         <h4>${newMember.name}</h4>
         <p class="fs-6 text">${newMember.role}</p>
         <p class="fs-6 text text-decoration-underline">${newMember.email}</p>
@@ -116,13 +116,6 @@ function addTeamMember() {
   document.getElementById("role").value = "";
   document.getElementById("email").value = "";
   document.getElementById("img").value = "";
-  // Chiudi il modulo
-  const modal = document.getElementById("modal");
-  const overlay = document.getElementById("overlay");
-  modal.style.display = "none";
-  overlay.style.display = "none";
-  // Reset del modulo
-  const form = document.getElementById("team-form");
-  form.reset();
+  
 }
 
