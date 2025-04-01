@@ -50,11 +50,12 @@ if (teamContainer) {
     card.classList.add("text-start");
     card.classList.add("m-1");
     
+    
     card.innerHTML = `
-      <div class="card-image">
+      <div class="card-image" style="max-width: 125px; max-height: 125px;">
         <img src="${member.img}" class="img-fluid" alt="${member.name}">
       </div>
-      <div class="card-text ">
+      <div class="card-text">
         <h4>${member.name}</h4>
         <p class=".fs-6 text">${member.role}</p>
         <p class=".fs-6 text">${member.email}</p>
@@ -97,7 +98,7 @@ function addTeamMember() {
     card.classList.add("m-2");
 
     card.innerHTML = `
-      <div class="card-image">
+      <div class="card-image" style="max-width: 125px; max-height: 125px;">
         <img src="${newMember.img}" class="img-fluid" alt="${newMember.name}">
       </div>
       <div class="card-text">
