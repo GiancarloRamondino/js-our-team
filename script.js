@@ -45,20 +45,20 @@ if (teamContainer) {
     const card = document.createElement("div");
     card.classList.add("team-card");
     card.classList.add("d-flex");
-    card.classList.add("bg-dark");
     card.classList.add("col-4");
     card.classList.add("text-start");
-    card.classList.add("m-1");
+    card.classList.add("mt-4");
+    
     
     
     card.innerHTML = `
-      <div class="card-image" style="max-width: 125px; max-height: 125px;">
-        <img src="${member.img}" class="img-fluid" alt="${member.name}">
+      <div class="card-image object-fit-contain">
+        <img src="${member.img}" style="width: 125px; height: 125px;" alt="${member.name}">
       </div>
-      <div class="card-text">
+      <div class="card-text bg-dark" style="width: 100%;">
         <h4>${member.name}</h4>
-        <p class=".fs-6 text">${member.role}</p>
-        <p class=".fs-6 text">${member.email}</p>
+        <p class="fs-6 text">${member.role}</p>
+        <p class="fs-6 text text-decoration-underline">${member.email}</p>
       </div>
     `;
 
@@ -92,19 +92,18 @@ function addTeamMember() {
     const card = document.createElement("div");
     card.classList.add("team-card");
     card.classList.add("d-flex");
-    card.classList.add("bg-dark");
     card.classList.add("col-4");
     card.classList.add("text-start");
-    card.classList.add("m-2");
+    card.classList.add("mt-4");
 
     card.innerHTML = `
-      <div class="card-image" style="max-width: 125px; max-height: 125px;">
-        <img src="${newMember.img}" class="img-fluid" alt="${newMember.name}">
+      <div class="card-image object-fit-contain">
+        <img src="${newMember.img}" style="width: 125px; height: 125px;" alt="${newMember.name}">
       </div>
-      <div class="card-text">
-        <h3>${newMember.name}</h3>
-        <p>${newMember.role}</p>
-        <p>${newMember.email}</p>
+      <div class="card-text bg-dark" style="width: 100%;">
+        <h4>${newMember.name}</h4>
+        <p class="fs-6 text">${newMember.role}</p>
+        <p class="fs-6 text text-decoration-underline">${newMember.email}</p>
       </div>
     `;
     teamContainer.appendChild(card);
